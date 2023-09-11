@@ -25,9 +25,9 @@ spec:
           volumes:
             - name: "ldap-sync-volume"
               configMap:
-                name: CHANGE_ME
+                name: ldap-config
             - name: "ldap-bind-password"
               secret:
-                secretName: CHANGE_ME
+                secretName: ldap-secret
           serviceAccountName: ldap-group-syncer
           serviceAccount: ldap-group-syncer

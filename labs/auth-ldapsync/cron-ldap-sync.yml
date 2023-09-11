@@ -2,9 +2,10 @@ kind: LDAPSyncConfig
 apiVersion: v1
 url: ldaps://idm.ocp4.example.com
 bindDN: uid=admin,cn=users,cn=accounts,dc=ocp4,dc=example,dc=com
-bindPassword: Redhat123@!
+bindPassword:
+  file: /etc/secrets/bindPassword
 insecure: false
-ca: ca.crt
+ca: /etc/config/ca.crt
 rfc2307:
     groupsQuery:
         baseDN: "cn=groups,cn=accounts,dc=ocp4,dc=example,dc=com"
